@@ -28,25 +28,4 @@ describe('Hash Stream', function () {
       done()
     })
   })
-
-  it('should work as a promise with a stream', function () {
-    return getHash(filename, 'sha256').then(function (res) {
-      assert.equal(res.toString('hex'), hash)
-    })
-  })
-
-  it('should work as a yieldable with a stream', function () {
-    return getHash(fs.createReadStream(filename), 'sha256').then(function (res) {
-      assert.equal(res.toString('hex'), hash)
-    })
-  })
-
-  it('should work as a yieldable with a simple stream', function () {
-    var s = new stream()
-    process.nextTick(function () {
-      s.emit('data', 'asdf')
-      s.emit('end')
-    })
-    return getHash(s, 'sha256')
-  })
 })

@@ -1,31 +1,21 @@
 {
-  "name": "hash-stream",
+  "name": "hash-stream-simple",
   "description": "Get a hash of a file or a stream",
-  "version": "1.1.0",
-  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
+  "version": "2.0.0",
+  "author": "William Casarin <bill@casarin.me>, Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
-  "repository": "stream-utils/hash-stream",
-  "dependencies": {
-    "commander": "*",
-    "native-or-bluebird": "1"
-  },
+  "repository": "jb55/hash-stream-simple",
   "devDependencies": {
-    "bluebird": "2",
-    "mocha": "0",
-    "istanbul": "0"
+    "mocha": "0"
   },
-  "bin": "./bin/nhash",
   "scripts": {
-    "test": "mocha --reporter spec",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+    "test": "mocha --reporter spec"
   },
   "keywords": [
     "hash",
     "stream"
   ],
   "files": [
-    "bin",
     "index.js",
     "HISTORY.md",
     "LICENSE"
